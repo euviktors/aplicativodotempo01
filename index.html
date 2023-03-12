@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Define a codificação e a compatibilidade com o navegador -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Inclui a fonte 'Poppins' e 'Roboto' do Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Inclui o arquivo de estilo CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Define o título da página -->
+    <title>Dia #02 - App de Clima | RussoDev</title>
+</head>
+
+<body>
+
+    <!-- Define o container principal da página -->
+    <div class="container">
+
+        <!-- Cria a barra de pesquisa para o usuário digitar o nome da cidade -->
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i> <!-- Ícone de localização -->
+            <input type="text" placeholder="Coloque a localização"> <!-- Campo de entrada de texto para o usuário digitar a cidade -->
+            <button class="fa-solid fa-magnifying-glass"></button> <!-- Botão de busca -->
+        </div>
+
+        <!-- Se a cidade digitada não for encontrada, exibe uma mensagem de erro -->
+        <div class="not-found">
+            <img src="images/404.png"> <!-- Imagem de erro -->
+            <p>Oops! Localização invalida :/</p> <!-- Texto de erro -->
+        </div>
+
+        <!-- Exibe informações do clima da cidade pesquisada -->
+        <div class="weather-box">
+            <img src=""> <!-- Imagem do clima -->
+            <p class="temperature"></p> <!-- Temperatura atual da cidade -->
+            <p class="description"></p> <!-- Descrição do clima (ensolarado, nublado, chuvoso, etc.) -->
+        </div>
+
+        <!-- Exibe detalhes do clima da cidade pesquisada -->
+        <div class="weather-details">
+            <!-- Informações sobre a umidade -->
+            <div class="humidity">
+                <i class="fa-solid fa-water"></i> <!-- Ícone de água -->
+                <div class="text">
+                    <span></span>
+                    <p>Umidade</p> <!-- Texto 'Humidity' (Umidade) -->
+                </div>
+            </div>
+            <!-- Informações sobre a velocidade do vento -->
+            <div class="wind">
+                <i class="fa-solid fa-wind"></i> <!-- Ícone de vento -->
+                <div class="text">
+                    <span></span>
+                    <p>Velocidade do vento</p> <!-- Texto 'Wind Speed' (Velocidade do Vento) -->
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Inclui o ícone do Font Awesome -->
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <!-- Inclui o arquivo de script JavaScript -->
+    <script src="index.js"></script>
+</body>
+
+</html>

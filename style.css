@@ -1,0 +1,211 @@
+/* Define as propriedades padrão para todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Define as propriedades para o corpo da página */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06283D;
+}
+
+/* Define as propriedades para o container principal */
+.container {
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+}
+
+/* Define as propriedades para a caixa de pesquisa */
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Define as propriedades para o campo de entrada da caixa de pesquisa */
+.search-box input {
+    color: #06283D;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+/* Define as propriedades para o texto de orientação do campo de entrada da caixa de pesquisa */
+.search-box input::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+/* Define as propriedades para o botão de pesquisa */
+.search-box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+/* Define as propriedades para o botão de pesquisa quando o mouse está sobre ele */
+.search-box button:hover {
+    color: #fff;
+    background: #06283D;
+}
+
+/* Define as propriedades para o ícone da lupa na caixa de pesquisa */
+.search-box i {
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+/* Define as propriedades para a caixa do tempo */
+.weather-box {
+    text-align: center;
+}
+
+/* Define as propriedades para a imagem do tempo */
+.weather-box img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+/* Define as propriedades para a temperatura */
+.weather-box .temperature {
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+/* Define as propriedades para o símbolo da unidade de temperatura */
+.weather-box .temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+/* Define as propriedades para a descrição do tempo */
+.weather-box .description {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Define as propriedades para os detalhes do tempo */
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between
+}
+
+/* Define o estilo para os elementos com as classes "humidity" e "wind" dentro do elemento com a classe "weather-details" */
+.weather-details .humidity, .weather-details .wind{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+/* Define o estilo para o elemento com a classe "humidity" dentro do elemento com a classe "weather-details" */
+.weather-details .humidity{
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+/* Define o estilo para o elemento com a classe "wind" dentro do elemento com a classe "weather-details" */
+.weather-details .wind{
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+/* Define o estilo para o elemento "i" dentro do elemento com a classe "weather-details" */
+.weather-details i{
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+/* Define o estilo para o elemento "span" dentro do elemento com a classe "weather-details" */
+.weather-details span{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Define o estilo para o elemento "p" dentro do elemento com a classe "weather-details" */
+.weather-details p{
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Define o estilo para o elemento com a classe "not-found" */
+.not-found{
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+/* Define o estilo para a imagem dentro do elemento com a classe "not-found" */
+.not-found img{
+    width: 70%;
+}
+
+/* Define o estilo para o elemento "p" dentro do elemento com a classe "not-found" */
+.not-found p{
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+/* Define o estilo para os elementos com as classes "weather-box" e "weather-details" */
+.weather-box, .weather-details{
+    scale: 0;
+    opacity: 0;
+}
+
+/* Define a animação "fadeIn" */
+.fadeIn
+{
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+/* Define a keyframe da animação "fadeIn" */
+@keyframes fadeIn{
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}
